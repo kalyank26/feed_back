@@ -12,7 +12,7 @@ function App() {
 
   const fetchFeedbacks = async () => {
     try {
-      const res = await axios.get("http://localhost:5000/feedback");
+      const res = await axios.get("https://feed-back-zh98.onrender.com/feedback");
       setFeedbacks(res.data);
     } catch (err) {
       console.error(err);
@@ -26,7 +26,7 @@ function App() {
       return;
     }
     try {
-      await axios.post("http://localhost:5000/feedback", formData);
+      await axios.post("https://feed-back-zh98.onrender.com/feedback", formData);
       setMessage("Feedback submitted successfully!");
       setFormData({ name: "", email: "", message: "" });
       fetchFeedbacks();
